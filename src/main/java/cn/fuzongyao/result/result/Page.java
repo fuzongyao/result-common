@@ -27,11 +27,11 @@ public class Page<T> {
     /**
      * 总数据量
      */
-    private Integer total = 0;
+    private Long total = 0L;
     /**
      * 是否有下一页
      */
-    private Boolean hasNext = Boolean.TRUE;
+    private Boolean hasNext = Boolean.FALSE;
     /**
      * 当前分页的数据
      */
@@ -45,7 +45,7 @@ public class Page<T> {
         this.pageSize = pageSize;
     }
 
-    public Page(Integer pageNumber, Integer pageSize, Integer totalPageNumber, Integer total, Boolean hasNext, List<T> items) {
+    public Page(Integer pageNumber, Integer pageSize, Integer totalPageNumber, Long total, Boolean hasNext, List<T> items) {
         this.pageNumber = pageNumber;
         this.pageSize = pageSize;
         this.totalPageNumber = totalPageNumber;
@@ -81,11 +81,11 @@ public class Page<T> {
         return this;
     }
 
-    public Integer getTotal() {
+    public Long getTotal() {
         return total;
     }
 
-    public Page<T> setTotal(Integer total) {
+    public Page<T> setTotal(Long total) {
         this.total = total;
         return this;
     }
